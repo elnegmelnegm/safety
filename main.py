@@ -11,10 +11,10 @@ def load_text_model() -> genai.GenerativeModel:
     return model
 
 # Define input prompt for hyperglycemia
-input_prompt = """
-               As an expert pharmacist specializing in toxicological effects, side effects, and drug-drug interactions, your task involves analyzing input text describing various drugs. Provide information on the potential toxicological effects, side effects, and interactions between the mentioned drugs. Consider the context of individuals with specific health conditions. If there are notable interactions, specify the recommendations or precautions to be taken. Use English and Arabic languages for the response.
-               """
 
+input_prompt = """
+As an expert in occupational safety and health, your role is to assess safety measures in different workplaces. Analyze input text describing various workplace scenarios and provide information on safety recommendations, precautions, and compliance with OSHA standards. Consider specific hazards, potential risks, and preventive measures. If there are notable safety concerns, specify the recommended actions or precautions to ensure a safe working environment. Use Arabic languages for the response.
+"""
 def generate_gemini_text_response(text_model, user_input):
     try:
         response = text_model.generate_content([input_prompt, user_input])
