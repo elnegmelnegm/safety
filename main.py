@@ -40,7 +40,7 @@ Powered by Google AI <img src="https://seeklogo.com/images/G/google-ai-logo-996E
 text_model = load_text_model()
 
 # User input for the food description
-user_input = st.text_area("Enter text describing a drug:")
+user_input = st.text_area("Enter text describing a safety measure:")
 
 # Generate response button
 if st.button("Generate Response"):
